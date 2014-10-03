@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="app_pane_attribute_width">160dp</dimen>
+    <dimen name="app_pane_border">4dp</dimen>
+
+</resources>

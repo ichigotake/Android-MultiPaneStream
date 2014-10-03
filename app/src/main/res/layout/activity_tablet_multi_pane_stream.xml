@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/activity_tablet_multi_pane_stream_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/activity_tablet_multi_pane_stream_attribute"
+        android:orientation="vertical"
+        >
+
+        <fragment
+            android:id="@+id/activity_tablet_multi_pane_stream_main_stream"
+            android:name="net.ichigotake.multipanestream.stream.main.MainStreamFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_main_stream" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_pane_border"
+            android:background="@color/pane_border"
+            />
+
+        <fragment
+            android:id="@+id/activity_tablet_multi_pane_stream_log_stream"
+            android:name="net.ichigotake.multipanestream.stream.log.LogStreamFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_log_stream" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/app_pane_border"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/activity_tablet_multi_pane_stream_container"
+        android:background="@color/pane_border"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/activity_tablet_multi_pane_stream_attribute"
+        android:layout_width="@dimen/app_pane_attribute_width"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        >
+
+        <fragment
+            android:id="@+id/activity_tablet_multi_pane_stream_attribute_joiner"
+            android:name="net.ichigotake.multipanestream.attribute.joiner.JoinerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_joiner" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/app_pane_border"
+            android:background="@color/pane_border"
+            />
+
+        <fragment
+            android:id="@+id/activity_tablet_multi_pane_stream_attribute_channel"
+            android:name="net.ichigotake.multipanestream.attribute.channel.ChannelFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/fragment_channel" />
+
+    </LinearLayout>
+
+</RelativeLayout>
