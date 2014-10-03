@@ -1,6 +1,6 @@
 # MultiPaneStream
 
-MultiPaneStream is an multi pane ui application inspire of LimeChat for Android application.
+\[**WIP**\] MultiPaneStream is an multi pane ui application inspire of LimeChat for Android application.
 
 * One window for multiple pane.
 
