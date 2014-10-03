@@ -18,7 +18,7 @@
 
         <fragment
             android:id="@+id/activity_tablet_multi_pane_stream_main_stream"
-            android:name="net.ichigotake.multipanestream.stream.main.MainStreamFragment"
+            android:name="net.ichigotake.multipanestream.stream.MainStreamFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
 
         <fragment
             android:id="@+id/activity_tablet_multi_pane_stream_log_stream"
-            android:name="net.ichigotake.multipanestream.stream.log.LogStreamFragment"
+            android:name="net.ichigotake.multipanestream.stream.LogStreamFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
