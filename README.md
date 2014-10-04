@@ -6,6 +6,15 @@
 
 ![](art/00_skelton.gif)
 
+## TODO
+
+- First, implement collect chat messages for me! (Chatwork,Gitter,HitChat,other private chat)
+- Decide to repository goal
+    - No plan
+    - application or library?
+- Implement backend local storage
+- Implement send to BroadcastIntent when message received
+
 ## Author
 
 ichigotake
