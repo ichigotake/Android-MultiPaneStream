@@ -19,6 +19,11 @@ android {
     }
 }
 
+dependencies {
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.jakewharton:butterknife:5.1.2'
+}
+
 // https://gist.github.com/ichigotake/6f6c21c26971c4248d6d
 task runChromeAppDebug(type: Exec) {
     executable "bash"

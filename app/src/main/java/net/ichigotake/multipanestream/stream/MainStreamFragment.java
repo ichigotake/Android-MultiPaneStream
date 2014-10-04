@@ -29,6 +29,7 @@ public final class MainStreamFragment extends ListFragment implements StreamCont
 
     public void setChannel(Channel channel) {
         topicView.setText(channel.getTopic());
+        adapter.getFilter().filter(channel.toString());
     }
 
     @Override

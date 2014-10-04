@@ -4,7 +4,7 @@
 
 * One window for multiple pane.
 
-![](art/00_skelton.png)
+![](art/00_skelton.gif)
 
 ## Author
 

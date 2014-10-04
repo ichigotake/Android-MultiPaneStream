@@ -45,7 +45,7 @@ final class MessageImpl implements Message, android.os.Parcelable {
 
     @Override
     public String toString() {
-        return String.format("%s[%s] %s: %s", timestamp, channel.getName(), title, body);
+        return String.format("%s[ %s ] %s: %s", timestamp, channel.getName(), title, body);
     }
 
     @Override
