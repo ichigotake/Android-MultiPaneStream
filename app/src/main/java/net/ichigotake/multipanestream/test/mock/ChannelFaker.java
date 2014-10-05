@@ -9,8 +9,6 @@ import java.util.List;
 
 public final class ChannelFaker {
 
-    private final JoinerFaker joinerFaker = new JoinerFaker();
-
     public Channel create() {
         CharSequence name = createName();
         return new ChannelBuilder()

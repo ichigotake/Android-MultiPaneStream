@@ -27,7 +27,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_pane_border"
-            android:background="@color/pane_border"
+            android:background="@color/app_pane_border"
             />
 
         <fragment
@@ -44,7 +44,7 @@
         android:layout_width="@dimen/app_pane_border"
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/activity_tablet_multi_pane_stream_container"
-        android:background="@color/pane_border"
+        android:background="@color/app_pane_border"
         />
 
 
@@ -67,12 +67,12 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/app_pane_border"
-            android:background="@color/pane_border"
+            android:background="@color/app_pane_border"
             />
 
         <fragment
             android:id="@+id/activity_tablet_multi_pane_stream_attribute_channel"
-            android:name="net.ichigotake.multipanestream.attribute.channel.ChannelFragment"
+            android:name="net.ichigotake.multipanestream.attribute.channel.ChannelTreeFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

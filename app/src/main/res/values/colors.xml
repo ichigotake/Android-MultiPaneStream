@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="pane_border">#aaaaaa</color>
+    <color name="app_pane_border">@color/app_black_500</color>
+    <color name="app_expandable_list_group_name">@color/app_black_1000</color>
+    <color name="app_expandable_list_child_name">@color/app_black_1000</color>
+    <color name="app_expandable_list_child_summary">@color/app_black_700</color>
+    <color name="app_">@color/app_black_700</color>
+
+    <!-- Color palette: http://www.google.com/design/spec/style/color.html#color-ui-color-palette -->
+    <color name="app_black_500">#9e9e9e</color>
+    <color name="app_black_700">#616161</color>
+    <color name="app_black_1000">#000000</color>
 
 </resources>

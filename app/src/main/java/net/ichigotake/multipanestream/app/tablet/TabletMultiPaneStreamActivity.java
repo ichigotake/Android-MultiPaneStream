@@ -5,13 +5,14 @@ import android.app.FragmentManager;
 import android.os.Bundle;
 
 import net.ichigotake.multipanestream.R;
-import net.ichigotake.multipanestream.attribute.channel.ChannelFragment;
+import net.ichigotake.multipanestream.attribute.channel.ChannelTreeFragment;
 import net.ichigotake.multipanestream.attribute.channel.OnChannelSelectedListener;
 import net.ichigotake.multipanestream.attribute.joiner.JoinerFragment;
 import net.ichigotake.multipanestream.sdk.Channel;
 import net.ichigotake.multipanestream.sdk.Message;
 import net.ichigotake.multipanestream.stream.LogStreamFragment;
 import net.ichigotake.multipanestream.stream.MainStreamFragment;
+import net.ichigotake.multipanestream.test.mock.ChannelCategoryFaker;
 import net.ichigotake.multipanestream.test.mock.ChannelFaker;
 import net.ichigotake.multipanestream.test.mock.MessageFaker;
 
@@ -22,6 +23,7 @@ public final class TabletMultiPaneStreamActivity extends Activity implements OnC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablet_multi_pane_stream);
 
+        ChannelCategoryFaker channelCategoryFaker = new ChannelCategoryFaker();
         MessageFaker messageFaker = new MessageFaker();
         Channel currentChannel = new ChannelFaker().create();
         FragmentManager fragmentManager = getFragmentManager();
@@ -30,15 +32,15 @@ public final class TabletMultiPaneStreamActivity extends Activity implements OnC
         mainStreamFragment.setChannel(currentChannel);
         LogStreamFragment logStreamFragment = (LogStreamFragment) fragmentManager
                 .findFragmentById(R.id.activity_tablet_multi_pane_stream_log_stream);
-        ChannelFragment channelFragment = (ChannelFragment) fragmentManager
+        ChannelTreeFragment channelTreeFragment = (ChannelTreeFragment) fragmentManager
                 .findFragmentById(R.id.activity_tablet_multi_pane_stream_attribute_channel);
         JoinerFragment joinerFragment = (JoinerFragment) fragmentManager
                 .findFragmentById(R.id.activity_tablet_multi_pane_stream_attribute_joiner);
-        for (int i=0; i<100; i++) {
+        for (int i=0; i<10; i++) {
             Message message = messageFaker.create();
             logStreamFragment.addMessage(message);
             mainStreamFragment.addMessage(message);
-            channelFragment.addChannel(message.getChannel());
+            channelTreeFragment.addChannel(channelCategoryFaker.create(), message.getChannel());
             joinerFragment.addJoiner(message.getChannel(), message.getAuthor());
         }
         joinerFragment.setChannel(currentChannel);

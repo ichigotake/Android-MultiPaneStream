@@ -17,7 +17,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/pane_border"
+        android:background="@color/app_pane_border"
         />
 
     <ListView
@@ -31,7 +31,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/pane_border"
+        android:background="@color/app_pane_border"
         />
 
     <EditText

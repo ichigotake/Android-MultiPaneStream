@@ -8,7 +8,7 @@
 
 ## TODO
 
-- First, implement collect chat messages for me! (Chatwork,Gitter,HitChat,other private chat)
+- First, implement collect chat messages for me! (Chatwork,Gitter,HitChat,Slack,other private chat)
 - Decide to repository goal
     - No plan
     - application or library?
