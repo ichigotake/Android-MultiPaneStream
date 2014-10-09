@@ -11,10 +11,25 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    def hasReleaseAuthority = new File("${rootDir}/gradle.properties").exists()
+    if (hasReleaseAuthority) {
+        signingConfigs {
+            release {
+                storeFile file(project.properties.storeFile)
+                storePassword project.properties.storePassword
+                keyAlias project.properties.storeAlias
+                keyPassword project.properties.keyPassword
+            }
+        }
+    }
+
     buildTypes {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            zipAlign true
         }
     }
 }
