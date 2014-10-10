@@ -8,6 +8,7 @@ import net.ichigotake.multipanestream.R;
 import net.ichigotake.multipanestream.attribute.channel.ChannelTreeFragment;
 import net.ichigotake.multipanestream.attribute.channel.OnChannelSelectedListener;
 import net.ichigotake.multipanestream.attribute.joiner.JoinerFragment;
+import net.ichigotake.multipanestream.receiver.GcmRegistrationAsyncTask;
 import net.ichigotake.multipanestream.sdk.Channel;
 import net.ichigotake.multipanestream.sdk.Message;
 import net.ichigotake.multipanestream.stream.LogStreamFragment;
@@ -22,6 +23,8 @@ public final class TabletMultiPaneStreamActivity extends Activity implements OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tablet_multi_pane_stream);
+
+        new GcmRegistrationAsyncTask().execute(this, this, this);
 
         ChannelCategoryFaker channelCategoryFaker = new ChannelCategoryFaker();
         MessageFaker messageFaker = new MessageFaker();
